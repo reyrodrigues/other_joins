@@ -11,6 +11,8 @@ module ActiveRecord
       4.0
     when ActiveRecord::VERSION::STRING =~ /^4.[1,2]/
       4.1
+    when ActiveRecord::VERSION::STRING =~ /^5./
+      5
     else
       raise InvalidActiveRecordVersion, "Gem 'other_joins #{OtherJoins::VERSION}' cannot work with 'activerecord #{ActiveRecord.version}'"
     end
